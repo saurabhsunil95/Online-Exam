@@ -1,3 +1,4 @@
+<%@page import="java.sql.*" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,7 +36,7 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="courses.jsp" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Courses</a>
+                <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Courses</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="courses.html">HTML</a>
                   <a class="dropdown-item" href="courses.html">WordPress</a>
@@ -69,11 +70,11 @@
             </ul>
              <ul class="navbar-nav absolute-right">
               <li class="nav-item">
-                <a href="login.jsp" class="nav-link active">Login</a>
+                <a href="Logout" class="nav-link active">Logout</a>
               </li>
-              <li class="nav-item">
-                <a href="register.jsp" class="nav-link">Register</a>
-              </li>
+<!--               <li class="nav-item"> -->
+<!--                 <a href="register.jsp" class="nav-link">Register</a> -->
+<!--               </li> -->
             </ul>
             
           </div>
@@ -82,76 +83,67 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
-      <div class="container">
-        <div class="row align-items-center site-hero-inner justify-content-center">
-          <div class="col-md-8 text-center">
+<!--     <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);"> -->
+<!--       <div class="container"> -->
+<!--         <div class="row align-items-center site-hero-inner justify-content-center"> -->
+<!--           <div class="col-md-8 text-center"> -->
 
-            <div class="mb-5 element-animate">
-              <h1>Admin Login</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
+<!--           </div> -->
+<!--         </div> -->
+<!--       </div> -->
+<!--     </section> -->
+<!--     END section -->
 
 
     <section class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-5 box">
-            <h2 class="mb-5">Log in with your account</h2>
-           <%
-	response.setHeader("cache-control", "no-cache,no-store,must-revalidate");
-	
-	if(session.getAttribute("username")==null){
-		response.sendRedirect("admin.jsp");
-	}
-	%>
-
-				  <% //String e = request.getParameter("mail");
-				  //String otp = request.getParameter("ootp");
-				  String e="";
-Cookie[] theCookies = request.getCookies();
-if(theCookies!=null){
-	for(Cookie tempCookie : theCookies){
-		if("email".equals(tempCookie.getName())){
-			e=tempCookie.getValue();
-			break;
+            
+            
+            <%
+            String e="";
+            Cookie[] theCookies = request.getCookies();
+            if(theCookies!=null){
+            	for(Cookie tempCookie : theCookies){
+            		if("studentmail".equals(tempCookie.getName())){
+            			e=tempCookie.getValue();
+            			break;
+            		}
+            	}
+            }
+	//String e = request.getParameter("email");
+    
+   	 	Class.forName("com.mysql.jdbc.Driver");
+		Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "9534598529");
+		Statement st = co.createStatement();
+		ResultSet rs = st.executeQuery("select * from students where email='"+e+"'");
+		
+		if(rs.next()) {
+				String n = rs.getString("name");
+				String c = rs.getString("city");
+				String m = rs.getString("mobile");
+				String i = rs.getString("language");
+				
+				out.println("<br><h2 style='text-align:center'>User Profile Card</h2>");
+				out.println("<img src='img.jpg' alt='User Image' style='width:150px;height:200px;display: block;margin-left: auto;margin-right: auto;'><br>");
+				out.println("<center><b>Name: </b>"+n+"</center><br>");
+				out.println("<center><b>City: </b>"+c+"</center><br>");
+				out.println("<center><b>Mobile no.: </b>"+m+"</center><br>");
+				out.println("<center><b>Programming langauge: </b>"+i+"</center><br>");
+					
+				
 		}
-	}
-}
-				  
-				  %>
-				  <center>
-				  <form action="OtpLogin">
-                  <div class="row ">
-                    <div class="col-md-12 form-group">
-                      <label for="name">Email</label>
-                      <input type="text" id="name" name="user" value=<%=e %> class="form-control " readonly>
-                    </div>
-                  </div>
-                  <div class="row mb-5">
-                    <div class="col-md-12 form-group">
-                      <label for="pass">OTP</label>
-                      <input type="password" id="pass" name="eotp" class="form-control " required="true">
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="submit" value="Login" class="btn btn-primary">
-                      <br>
-                      <br>
-                      <li><a href="login.jsp">Students Login</a></li>
-                        <li><a href="company.jsp">Company Login</a></li>
-                   </div>
-                  </div>
-                </form>
-				  </center>
-				  
+		co.close();
+		%>
+		
 
+<%-- 		<br><center><a href="Invite?mail=<%=e %>"><button class='btn btn-primary'>Invite</button></a></center><br> --%>
+	<%
+	%>
+            
+            
+            
           </div>
         </div>
       </div>

@@ -19,10 +19,11 @@ Connection con = null;
         String pass = request.getParameter("password");
         String city = request.getParameter("city");
         String mob = request.getParameter("mobile");
+        String lang = request.getParameter("language");
         //String usr = request.getParameter("userid");
         //String inf = request.getParameter("info");
-        
-        String queryText = "insert into students values('"+name+"','"+city+"','"+mob+"','"+ mail+"','"+pass+"')";
+        out.println(lang);
+        String queryText = "insert into students values('"+name+"','"+city+"','"+mob+"','"+ mail+"','"+pass+"','"+lang+"')";
 
  		Class.forName("com.mysql.jdbc.Driver");
  		Connection co = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "9534598529");

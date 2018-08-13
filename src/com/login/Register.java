@@ -24,10 +24,11 @@ public class Register extends HttpServlet {
         String pass = request.getParameter("password");
         String city = request.getParameter("city");
         String mob = request.getParameter("mobile");
+        String lang = request.getParameter("language");
         //String usr = request.getParameter("userid");
         //String inf = request.getParameter("info");
         
-        String queryText = "insert into students values('"+name+"','"+city+"','"+mob+"','"+ mail+"','"+pass+"')";
+        String queryText = "insert into students values('"+name+"','"+city+"','"+mob+"','"+ mail+"','"+pass+"','"+lang+"')";
 
  		try{
  			Class.forName("com.mysql.jdbc.Driver");

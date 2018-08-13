@@ -33,7 +33,7 @@ public class OtpLogin extends HttpServlet {
 			response.sendRedirect("admin_dashboard.jsp");
 		}
 		else {
-			response.sendRedirect("admin_login.jsp");
+			response.sendRedirect("admin_login_handler.jsp");
 		}
 	}
 

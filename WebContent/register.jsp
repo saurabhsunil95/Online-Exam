@@ -120,6 +120,12 @@
                       <input type="email" id="name" name="email" class="form-control ">
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Language</label>
+                      <input type="text" id="language" name="language" class="form-control ">
+                    </div>
+                  </div>
                   <div class="row mb-5">
                     <div class="col-md-12 form-group">
                       <label for="name">Password</label>

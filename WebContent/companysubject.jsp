@@ -202,10 +202,10 @@
 	 <%
 	  for(int index = 0; index < tables.length; index++)
 	  {
-		  if(tables[index].endsWith(".java")){
+		  if(tables[index].endsWith("."+sub)){
 			  
 			  String name=tables[index];
-			  String email=name.replace(".java","");
+			  String email=name.replace("."+sub,"");
 			  
 			  ResultSet rs3 = st3.executeQuery("select marks from `"+tables[index]+"`");
 			  int totalmarks=0;

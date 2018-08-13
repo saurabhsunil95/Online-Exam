@@ -209,7 +209,7 @@
                   <div class="row">
                     <div class="col-md-12 form-group">
                     <div class="icon">
-                        <span class="ti-user"><a href="#">  Profile</a></span>
+                        <span class="ti-user"><a href="profile.jsp">  Profile</a></span>
                     </div>
                       
                     </div>
