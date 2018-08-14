@@ -97,108 +97,19 @@
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
 
-        <div class="hero-content-overlay">
+        <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
-                            <header class="entry-header">
-                                <h4>Get started with online courses and Online Test</h4>
-                                <h1>best online<br/>Learning system</h1>
-                            </header><!-- .entry-header -->
-
-                            <div class="entry-content">
-                                <p>Online learning is one of the upcoming trends in the education sectors all over the world. This is a mode of learning whereby learning is done through the internet. With modern and improved technologies, this mode of learning has been made easier. Improve Your knowledge by learning online and by giving online test</p>
-                            </div><!-- .entry-content -->
-
-                            <footer class="entry-footer read-more">
-                                <a href="#">read more</a>
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .hero-content-wrap -->
+                        <header class="entry-header">
+                            <center><h1 style="color:white">YOUR DASHBOARD</h1></center>
+                        </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
-        </div><!-- .hero-content-hero-content-overlay -->
-    </div><!-- .hero-content -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
 
-    <div class="icon-boxes">
-        <div class="container-fluid">
-            <div class="flex flex-wrap align-items-stretch">
-                <div class="icon-box">
-                    <div class="icon">
-                        <span class="ti-user"></span>
-                    </div><!-- .icon -->
-
-                    <header class="entry-header">
-                        <h2 class="entry-title">Learn From The Experts</h2>
-                    </header><!-- .entry-header -->
-
-                    <div class="entry-content">
-                        <p>We have best Expert team. Find the right instructor for you</p>
-                    </div><!-- .entry-content -->
-
-                    <footer class="entry-footer read-more">
-                        <a href="#">Find<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
-
-                <div class="icon-box">
-                    <div class="icon">
-                        <span class="ti-folder"></span>
-                    </div><!-- .icon -->
-
-                    <header class="entry-header">
-                        <h2 class="entry-title">Book Library & Store</h2>
-                    </header><!-- .entry-header -->
-
-                    <div class="entry-content">
-                        <p> It's become a lot easier to read eBooks than it used to be and there are a ton of options. Here are the best eBook reader apps for You!</p>
-                    </div><!-- .entry-content -->
-
-                    <footer class="entry-footer read-more">
-                        <a href="#">Find<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
-
-                <div class="icon-box">
-                    <div class="icon">
-                        <span class="ti-book"></span>
-                    </div><!-- .icon -->
-
-                    <header class="entry-header">
-                        <h2 class="entry-title">Best Course Online</h2>
-                    </header><!-- .entry-header -->
-
-                    <div class="entry-content">
-                        <p>Take the world's best courses.</p>
-                    </div><!-- .entry-content -->
-
-                    <footer class="entry-footer read-more">
-                        <a href="#">Find<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
-
-                <div class="icon-box">
-                    <div class="icon">
-                        <span class="ti-world"></span>
-                    </div><!-- .icon -->
-
-                    <header class="entry-header">
-                        <h2 class="entry-title">Online Test</h2>
-                    </header><!-- .entry-header -->
-
-                    <div class="entry-content">
-                        <p>Improve your knowledge.</p>
-                    </div><!-- .entry-content -->
-
-                    <footer class="entry-footer read-more">
-                        <a href="#">Find<i class="fa fa-long-arrow-right"></i></a>
-                    </footer><!-- .entry-footer -->
-                </div><!-- .icon-box -->
-            </div><!-- .row -->
-        </div><!-- .container-fluid -->
-    </div><!-- .icon-boxes -->
-    
     
     <section class="site-section bg-light">
       <div class="container">

@@ -111,29 +111,18 @@ welcome
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
 
-        <div class="hero-content-overlay">
+        <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
-                            <header class="entry-header">
-                                <h4>Get started with online courses and Online Test</h4>
-                                <h1>best online<br/>Learning system</h1>
-                            </header><!-- .entry-header -->
-
-                            <div class="entry-content">
-                                <p>Online learning is one of the upcoming trends in the education sectors all over the world. This is a mode of learning whereby learning is done through the internet. With modern and improved technologies, this mode of learning has been made easier. Improve Your knowledge by learning online and by giving online test</p>
-                            </div><!-- .entry-content -->
-
-                            <footer class="entry-footer read-more">
-                                <a href="#">read more</a>
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .hero-content-wrap -->
+                        <header class="entry-header">
+                            <center><h1 style="color:white">REPORT CARD</h1></center>
+                        </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
-        </div><!-- .hero-content-hero-content-overlay -->
-    </div><!-- .hero-content -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
 
     
     <section class="site-section bg-light">
@@ -173,7 +162,7 @@ welcome
 		ResultSet rs=null;
 		int r=0;
 		try{
-		 r = st.executeUpdate("create table `"+uname+"."+sub+"` (quesid int primary key not null,ans varchar(200),marks int)");
+		 r = st.executeUpdate("create table `"+uname+"$."+sub+"$` (quesid int primary key not null,ans varchar(200),marks int)");
 		}catch(Exception e){
 			System.out.println("table already in the database "+e);
 		}
@@ -215,14 +204,14 @@ welcome
 			totalmarks=totalmarks+marks;
 			
 			  try{
-				  int i = st.executeUpdate("insert into `"+uname+"."+sub+"` values('"+j+"','"+ans+"','"+marks+"')");
+				  int i = st.executeUpdate("insert into `"+uname+"$."+sub+"$` values('"+j+"','"+ans+"','"+marks+"')");
 			  } catch(Exception e){
 				 System.out.println("Exception " + e);  
 			  }
 			
 			
 		}
-		ResultSet showreport = st.executeQuery("select * from `"+uname+"."+sub+"`");
+		ResultSet showreport = st.executeQuery("select * from `"+uname+"$."+sub+"$`");
 		while(showreport.next()){
 			int quesno=showreport.getInt("quesid");
 			int obtainmarks=showreport.getInt("marks");

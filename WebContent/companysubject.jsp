@@ -103,36 +103,24 @@
             </div><!-- .nav-bar -->
         </header><!-- .site-header -->
 
-        <div class="hero-content-overlay">
+        <div class="page-header-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
-                            <header class="entry-header">
-                                <h4>Get started with online courses and Online Test</h4>
-                                <h1>best online<br/>Learning system</h1>
-                            </header><!-- .entry-header -->
-
-                            <div class="entry-content">
-                                <p>Online learning is one of the upcoming trends in the education sectors all over the world. This is a mode of learning whereby learning is done through the internet. With modern and improved technologies, this mode of learning has been made easier. Improve Your knowledge by learning online and by giving online test</p>
-                            </div><!-- .entry-content -->
-
-                            <footer class="entry-footer read-more">
-                                <a href="#">read more</a>
-                            </footer><!-- .entry-footer -->
-                        </div><!-- .hero-content-wrap -->
+                        <header class="entry-header">
+                            <center><h1 style="color:white">STUDENT LISTS</h1></center>
+                        </header><!-- .entry-header -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
-        </div><!-- .hero-content-hero-content-overlay -->
-    </div><!-- .hero-content -->
+        </div><!-- .page-header-overlay -->
+    </div><!-- .page-header -->
 
-    
     <section class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 box">
-            <center><h2 class="mb-12">Students Record</h2></center>
+            <center><h2 class="mb-12"></h2></center><br><br>
                    
              <%
 	response.setHeader("cache-control", "no-cache,no-store,must-revalidate");
@@ -202,12 +190,15 @@
 	 <%
 	  for(int index = 0; index < tables.length; index++)
 	  {
-		  if(tables[index].endsWith("."+sub)){
+		  String s="$."+sub+"$";
+		  if(tables[index].endsWith(s)){
 			  
 			  String name=tables[index];
-			  String email=name.replace("."+sub,"");
+			  String email=name.replace(s,"");
+			  System.out.println("select marks from `"+tables[index]+"`");
 			  
 			  ResultSet rs3 = st3.executeQuery("select marks from `"+tables[index]+"`");
+			  
 			  int totalmarks=0;
 			  while(rs3.next()){
 				  int ii=rs3.getInt("marks");
